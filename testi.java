@@ -7,42 +7,42 @@ public class testi {
 		//Aluksi tulostetaan do silmukalla valikko.
 		do {
 			
-			System.out.println("- 1.  Pääkaupunkivisa  -");
+			System.out.println("- 1.  PÃ¤Ã¤kaupunkivisa  -");
 			System.out.println("- 2.  Urheiluvisa      -");
 			System.out.println("- 3.  Lopeta ohjelma   -");
 			System.out.println("------------------------");
 			System.out.println("------------------------");
-			System.out.println("-     Mitä tehdään     -");
+			System.out.println("-     MitÃ¤ tehdÃ¤Ã¤n     -");
 			System.out.println("-  Valitse 1, 2 tai 3  -");
 			
 			luku = lukija.nextInt();
-			//Jos käyttäjän antama numero on 1 niin mennään pääkaupunkivisaan, jonka jälkeen tulee break eli ei mennä do silmukan alkuun.
+			//Jos kÃ¤yttÃ¤jÃ¤n antama numero on 1 niin mennÃ¤Ã¤n pÃ¤Ã¤kaupunkivisaan, jonka jÃ¤lkeen tulee break eli ei mennÃ¤ do silmukan alkuun.
 			if (luku == 1) 
 			{
-				pääkaupunki();
+				pÃ¤Ã¤kaupunki();
 				break;
 			} 
-			// Jos 2 niin sama kuin edellisessä mutta tulostetaan urheiluvisa.
+			// Jos 2 niin sama kuin edellisessÃ¤ mutta tulostetaan urheiluvisa.
 			else if (luku == 2) 
 			{
 				urheilu();
 				break;
 			}
-			//Jos joku muu kuin 1, 2 tai 3 niin tulostetaan "Yritä uudelleen" ja mennään do silmukan alkuun. 
+			//Jos joku muu kuin 1, 2 tai 3 niin tulostetaan "YritÃ¤ uudelleen" ja mennÃ¤Ã¤n do silmukan alkuun. 
 			else if (luku > 3 || luku < 1)
 			{
-				System.out.println("Yritä uudelleen");
+				System.out.println("YritÃ¤ uudelleen");
 			}
 			
 			}
-			//Jos 3 niin tulostetaan "Nähdään ensi kerralla!" ja ohjelma loppuu.
+			//Jos 3 niin tulostetaan "NÃ¤hdÃ¤Ã¤n ensi kerralla!" ja ohjelma loppuu.
 			while (luku != 3);
-			System.out.println("\n" + "Nähdään ensi kerralla!");
+			System.out.println("\n" + "NÃ¤hdÃ¤Ã¤n ensi kerralla!");
 			
 		}
-		private static void pääkaupunki() {
+		private static void pÃ¤Ã¤kaupunki() {
 		Scanner lukija = new Scanner(System.in);
-		//int oik on pisteytystä varten ja int kysymykset on kysymyksen numeroa varten, jotta tietää missä mennään.		
+		//int oik on pisteytystÃ¤ varten ja int kysymykset on kysymyksen numeroa varten, jotta tietÃ¤Ã¤ missÃ¤ mennÃ¤Ã¤n.		
 		int oik = 0;
 		int kysymykset = 1;	 
 		//Perus tervehdys.
@@ -51,28 +51,28 @@ public class testi {
 		ohje();
 		//Kysymyksen numero
 		kysymys(kysymykset);
-		//Tulostetaan kysymys ja vaihtoehdot.Kun tämä käydään läpi niin +1 kysymysten numeroihin.
-		System.out.println("Mikä on Suomen pääkaupunki?");
+		//Tulostetaan kysymys ja vaihtoehdot. Kun tÃ¤mÃ¤ kÃ¤ydÃ¤Ã¤n lÃ¤pi niin +1 kysymysten numeroihin.
+		System.out.println("MikÃ¤ on Suomen pÃ¤Ã¤kaupunki?");
 		System.out.println("a. Turku");
 		System.out.println("b. Helsinki");
 		System.out.println("c. Oulu");
 		kysymykset += 1;
-		//Jos käyttäjä laittaa vastauksen oikein niin oikeisiin vastauksiin +1.
+		//Jos kÃ¤yttÃ¤jÃ¤ laittaa vastauksen oikein niin oikeisiin vastauksiin +1.
 		String vastaus = lukija.nextLine();
 		if (vastaus.equals("b"))
 		{
 			System.out.println("Oikea vastaus!\n");
 			oik += 1;
 		}
-		//Jos väärin niin mennään niin ei tule pistettä ja mennään eteenpäin.
+		//Jos vÃ¤Ã¤rin niin ei tule pistettÃ¤ ja mennÃ¤Ã¤n eteenpÃ¤in.
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		//Sama prosessi toistuu monta kertaa.
 		kysymys(kysymykset);
 		
-		System.out.println("Mikä on Japanin pääkaupunki?");
+		System.out.println("MikÃ¤ on Japanin pÃ¤Ã¤kaupunki?");
 		System.out.println("a. Tokio");
 		System.out.println("b. Osaka");
 		System.out.println("c. Kioto");
@@ -86,13 +86,13 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Mikä on Ruotsin pääkaupunki?");
-		System.out.println("a. Göteborg");
+		System.out.println("MikÃ¤ on Ruotsin pÃ¤Ã¤kaupunki?");
+		System.out.println("a. GÃ¶teborg");
 		System.out.println("b. Tukholma");
 		System.out.println("c. Upsala");
 		kysymykset += 1;
@@ -105,12 +105,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Mikä on Portugalin pääkaupunki?");
+		System.out.println("MikÃ¤ on Portugalin pÃ¤Ã¤kaupunki?");
 		System.out.println("a. Braga");
 		System.out.println("b. Porto");
 		System.out.println("c. Lissabon");
@@ -124,15 +124,15 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Mikä on Saksan pääkaupunki?");
+		System.out.println("MikÃ¤ on Saksan pÃ¤Ã¤kaupunki?");
 		System.out.println("a. Berliini");
-		System.out.println("b. München");
-		System.out.println("c. Köln");
+		System.out.println("b. MÃ¼nchen");
+		System.out.println("c. KÃ¶ln");
 		kysymykset += 1;
 
 		vastaus = lukija.nextLine();
@@ -143,12 +143,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Mikä on Kanadan pääkaupunki?");
+		System.out.println("MikÃ¤ on Kanadan pÃ¤Ã¤kaupunki?");
 		System.out.println("a. Toronto");
 		System.out.println("b. Ottawa");
 		System.out.println("c. Montreal");
@@ -162,15 +162,15 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Mikä on Brasilian pääkaupunki?");
-		System.out.println("a. Brasília");
+		System.out.println("MikÃ¤ on Brasilian pÃ¤Ã¤kaupunki?");
+		System.out.println("a. BrasÃ­lia");
 		System.out.println("b. Rio de Janeiro");
-		System.out.println("c. São Paulo");
+		System.out.println("c. SÃ£o Paulo");
 		kysymykset += 1;
 
 		vastaus = lukija.nextLine();
@@ -181,14 +181,14 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}	
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Mikä on Belgian pääkaupunki?");
+		System.out.println("MikÃ¤ on Belgian pÃ¤Ã¤kaupunki?");
 		System.out.println("a. Bryssel");
-		System.out.println("b. Liège");
+		System.out.println("b. LiÃ¨ge");
 		System.out.println("c. Gent");
 		kysymykset += 1;
 
@@ -200,13 +200,13 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Mikä on Espanjan pääkaupunki?");
-		System.out.println("a. Málaga");
+		System.out.println("MikÃ¤ on Espanjan pÃ¤Ã¤kaupunki?");
+		System.out.println("a. MÃ¡laga");
 		System.out.println("b. Barcelona");
 		System.out.println("c. Madrid");
 		kysymykset += 1;
@@ -219,12 +219,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Mikä on Australian pääkaupunki?");
+		System.out.println("MikÃ¤ on Australian pÃ¤Ã¤kaupunki?");
 		System.out.println("a. Canberra");
 		System.out.println("b. Sydney");
 		System.out.println("c. Melbourne");
@@ -238,12 +238,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
-		//Tässä kohtaa loppuu kysymykset ja lasketaan pisteet alla näkyvällä tavalla.
+		//TÃ¤ssÃ¤ kohtaa loppuu kysymykset ja lasketaan pisteet alla nÃ¤kyvÃ¤llÃ¤ tavalla.
 		double pisteet = ( 100.*oik) / (kysymykset-1);
 		
-		System.out.println("Sinä sait " + pisteet + "%" + " oikein!");
+		System.out.println("SinÃ¤ sait " + pisteet + "%" + " oikein!");
 		
 		}	
 		//Metodi, jolla tulostetaan kysymysten numerot.
@@ -251,26 +251,26 @@ public class testi {
 		System.out.println("Kysymys nro." + kysymykset + "\n");
 			
 		}
-		//Alla näkyy kaksi erilaista metodia, joilla tulostetaan tervehdykset.
+		//Alla nÃ¤kyy kaksi erilaista metodia, joilla tulostetaan tervehdykset.
 		private static void tervetuloa1() {
-		System.out.println("\n" + "Tervetuloa pääkaupunkivisaan!" + "\n");
+		System.out.println("\n" + "Tervetuloa pÃ¤Ã¤kaupunkivisaan!" + "\n");
 		}
 		
 		private static void tervetuloa2() {
 		System.out.println("\n" + "Tervetuloa urheiluvisaan!" + "\n");
 		}
-		//Tässä on ohjeiden metodi.
+		//TÃ¤ssÃ¤ on ohjeiden metodi.
 		private static void ohje() {
 			
 			System.out.println("-----------  Ohjeet  ------------");
 			System.out.println("---------------------------------");
-			System.out.println("-  Tietovisassa on 10 kysymystä -");
+			System.out.println("-  Tietovisassa on 10 kysymystÃ¤ -");
 			System.out.println("- Valitse a, b tai c vaihtoehto -");
 			System.out.println();
 			System.out.println();
 		}
 		
-		//Samalla tavalla tehty, kuin pääkaupinki visa.
+		//Samalla tavalla tehty, kuin pÃ¤Ã¤kaupinki visa.
 		private static void urheilu() {
 		Scanner lukija = new Scanner(System.in);
 				
@@ -282,7 +282,7 @@ public class testi {
 		ohje();
 		
 		kysymys(kysymykset);
-		System.out.println("Missä joukkueessa Lionel Messi pelaa?");
+		System.out.println("MissÃ¤ joukkueessa Lionel Messi pelaa?");
 		System.out.println("a. PSG");
 		System.out.println("b. Real Madrid");
 		System.out.println("c. Barcelona");
@@ -296,12 +296,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Mistä NHL on lyhenne?");
+		System.out.println("MistÃ¤ NHL on lyhenne?");
 		System.out.println("a. National Hockey League");
 		System.out.println("b. Northern Hockey League");
 		System.out.println("c. Navy Hockey league");
@@ -315,12 +315,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 			
-		System.out.println("Monta pistettä touchdownista saa?");
+		System.out.println("Monta pistettÃ¤ touchdownista saa?");
 		System.out.println("a. 6");
 		System.out.println("b. 7");
 		System.out.println("c. 8");
@@ -334,12 +334,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Missä joukkueessa LeBron James aloitti hänen NBA uransa?");
+		System.out.println("MissÃ¤ joukkueessa LeBron James aloitti hÃ¤nen NBA uransa?");
 		System.out.println("a. Miami Heat");
 		System.out.println("b. Los Angeles Lakers");
 		System.out.println("c. Cleveland Cavaliers");
@@ -353,12 +353,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Minkä maalainen on jalkapalloilija Cristiano Ronaldo");
+		System.out.println("MinkÃ¤ maalainen on jalkapalloilija Cristiano Ronaldo");
 		System.out.println("a. Kreikkalainen");
 		System.out.println("b. Portugalilainen");
 		System.out.println("c. Brasilialainen");
@@ -372,12 +372,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Minkä maalainen on autourheilija Kimi Räikkönen");
+		System.out.println("MinkÃ¤ maalainen on autourheilija Kimi RÃ¤ikkÃ¶nen");
 		System.out.println("a. Suomalainen");
 		System.out.println("b. Virolainen");
 		System.out.println("c. Ruotsalainen");
@@ -391,15 +391,15 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 			
 		kysymys(kysymykset);
 		
-		System.out.println("Mistä lajista Teemu Selänne on tunnettu");
-		System.out.println("a. Tenniksestä");
-		System.out.println("b. Jääkiekosta");
-		System.out.println("c. Pesäpallosta");
+		System.out.println("MistÃ¤ lajista Teemu SelÃ¤nne on tunnettu");
+		System.out.println("a. TenniksestÃ¤");
+		System.out.println("b. JÃ¤Ã¤kiekosta");
+		System.out.println("c. PesÃ¤pallosta");
 		kysymykset += 1;
 
 		vastaus = lukija.nextLine();
@@ -410,12 +410,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}	
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Montako mailaa saa olla kentällä mukana golffissa");
+		System.out.println("Montako mailaa saa olla kentÃ¤llÃ¤ mukana golffissa");
 		System.out.println("a. 12");
 		System.out.println("b. 14");
 		System.out.println("c. 16");
@@ -429,15 +429,15 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Mistä lajista Roger Federer on tunnettu?");
+		System.out.println("MistÃ¤ lajista Roger Federer on tunnettu?");
 		System.out.println("a. Jalkapallosta");
 		System.out.println("b. Baseballista");
-		System.out.println("c. Tenniksestä");
+		System.out.println("c. TenniksestÃ¤");
 		kysymykset += 1;
 
 		vastaus = lukija.nextLine();
@@ -448,12 +448,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		kysymys(kysymykset);
 		
-		System.out.println("Monta pelaajaa on yhdellä joukkueella kentällä käsipallossa?");
+		System.out.println("Monta pelaajaa on yhdellÃ¤ joukkueella kentÃ¤llÃ¤ kÃ¤sipallossa?");
 		System.out.println("a. 5");
 		System.out.println("b. 6");
 		System.out.println("c. 7");
@@ -467,12 +467,12 @@ public class testi {
 		}
 		else
 		{
-			System.out.println("Väärä vastaus :(\n");
+			System.out.println("VÃ¤Ã¤rÃ¤ vastaus :(\n");
 		}
 		
 		double pisteet = ( 100.*oik) / (kysymykset-1);
 			
-		System.out.println("Sinä sait " + pisteet + "%" + " oikein!");
+		System.out.println("SinÃ¤ sait " + pisteet + "%" + " oikein!");
 			
 		}
 		
