@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+	<title>Lucan nettisivu</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Acme&family=Permanent+Marker&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="images/footer-img.png" />
+
+</head>
+<body>
+
+<section id="banner">
+	<img src="images/logo.png" class="logo" alt="person holding a beer">
+	<div class="banner-text">
+		<h1>Platform no.2</h1>
+		<p>Ilmaiset nachot joka ikinen päivä!<p>
+		<div class="banner-btn">
+			<a href="index.html"><span></span>Platform</a>
+			<a href="index2.html"><span></span>Tapahtumat</a>
+			<a href="index3.html"><span></span>Varaa Pöytä</a>
+			<a href="index4.html"><span></span>Liity Jäseneksi</a>
+		</div>
+	</div>
+</section>
+
+<div id="sideNav">
+	<nav>
+	<ul>
+		<li><a href="#banner">Etusivu</a></li>
+		<li><a href="#varaus">Varaa Pöytä</a></li>
+		<li><a href="#footer">Ota yhteyttä</a></li>
+	</ul>
+	</nav>
+</div>
+<div id="menuBtn">
+	<img src="images/menu.png" id="menu" alt="bars">
+</div>
+
+
+<section id="varaus">
+<div class="title-text">
+<p>Varaa Pöytä</p>
+<h1>Pidä hauskaa omalla porukalla</h1>
+</div>
+<div class="varaaminen">
+<h2>Varaa pöytä</h2>
+<p>Voit varata pöydän Platformista, jotta seurueellanne on käytössänne oma pöytä koko illan. Näin voitte rauhassa nauttia baarin loistavasta tunnelmasta. Tarjoamme juomia jokaiseen makuun, sekä nachoja maukkaalla kastikkeella.
+<br><br>
+Huom! Saavuthan ajoissa! Pöytä annetaan seuraavalle jos saavut yli 15min varauksen alkamisen jälkeen. 
+
+Samalle illalle tehtävät varaukset tulisi tehdä 19:00 mennessä.</p>
+</div>
+	<button type="button" class="button" onclick="alert('Valitettavasti pöytiä ei pysty varaamaan koronatilanteen takia')">Varaa Pöytä</button>
+</section>
+
+
+
+<section id="footer">
+	<img src="images/footer-img.png" class="footer-img" alt="Drawing of a beer">
+	<div class="title-text">
+	<p>Ota Yhteyttä</p>
+	<h1>Tule Pelaamaan Yatzya Jo Tänään</h1>
+	</div>
+<div class="footer-row">
+<div class="footer-left">
+	<h1>Aukioloajat</h1>
+	<p><i class="fa fa-clock-o"></i>Ma - Pe  14.00 - 22.00</p>
+	<p><i class="fa fa-clock-o"></i>La - Su  15.00 - 21.00</p>
+</div>
+<div class="footer-right">
+	<h1>Yhteystiedot</h1>
+	<p>Ratakuja 1, 01300 Vantaa<i class="fa fa-map-marker"></i></p>
+	<p>platform@gmail.com<i class="fa fa-envelope"></i></p>
+	<p> 041 3185946<i class="fa fa-phone"></i></p>
+</div>
+</div>	
+	
+<div class="social-links">
+	<i class="fa fa-facebook"></i>
+	<i class="fa fa-instagram"></i>
+	<i class="fa fa-twitter"></i>
+	<i class="fa fa-youtube-play"></i>
+</div>
+	
+</section>
+
+
+
+
+
+<script>
+var menuBtn = document.getElementById("menuBtn")
+var sideNav = document.getElementById("sideNav")
+var menu = document.getElementById("menu")
+
+sideNav.style.righ = "-250px"
+
+menuBtn.onclick = function(){
+	if(sideNav.style.right == "-250px"){
+		sideNav.style.right = "0";
+		menu.src = "images/close.png";
+	}
+	else{
+		sideNav.style.right = "-250px";
+		menu.src = "images/menu.png";
+
+	}
+}
+
+var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 1000,
+	speedAsDuration: true
+});
+
+</script>
+
+
+
+</body>
+</html>
